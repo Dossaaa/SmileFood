@@ -4,8 +4,87 @@
 @import 'global';
 
 
+.header {
+  padding: 60px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+}
 
 
+.menu {
+  &__list {
+    display: flex;
+    margin-right: 60px;
+    list-style: none;
+  }
+
+  &__list-item:not(:last-child){
+    margin-right: 45px;
+  }
+
+  &__list-link {
+    font-size: 18px;
+    transition: all 0.3s;
+    &:hover {
+      color: $accent;
+    }
+    &:focus {
+      outline: 1px solid $accent;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.01);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    }
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+  }
+
+  &__list-link--active {
+    color: $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link {
+    position: relative;
+    &:hover {
+      outline: 1px solid $accent;
+      border-radius: 5px;
+    }
+    &:focus {
+      outline: 5px solid $accent;
+      border-radius: 5px;
+      background: #FF7A50;
+    }
+  }
+  &__link:not(:last-child) {
+    margin-right: 35px
+  }
+  &__num {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: -5px;
+    right: -5px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 14px;
+  }
+}
 
 
 
